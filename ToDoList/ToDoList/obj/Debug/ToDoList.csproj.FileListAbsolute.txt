@@ -33,3 +33,5 @@ D:\Documents\Personal Projects\TodoList\ToDoList\ToDoList\obj\Debug\View\MainWin
 D:\Documents\Personal Projects\TodoList\ToDoList\ToDoList\obj\Debug\View\SupplierView.g.cs
 D:\Documents\Personal Projects\TodoList\ToDoList\ToDoList\obj\Debug\View\SupplierView.baml
 D:\Documents\Personal Projects\TodoList\ToDoList\ToDoList\obj\Debug\ToDoList_Content.g.cs
+D:\Documents\Personal Projects\TodoList\ToDoList\ToDoList\obj\Debug\View\AddSupplierView.g.cs
+D:\Documents\Personal Projects\TodoList\ToDoList\ToDoList\obj\Debug\View\AddSupplierView.baml

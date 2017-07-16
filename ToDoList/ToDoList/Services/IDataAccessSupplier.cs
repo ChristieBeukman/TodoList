@@ -12,6 +12,6 @@ namespace ToDoList.Services
      public interface IDataAccessSupplier
     {
         ObservableCollection<Suppliier> GetSupplierDataAccess();
-        void CreateSupplier();
+        void CreateSupplier(Suppliier Sup);
     }
 }

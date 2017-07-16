@@ -3,6 +3,7 @@ using GalaSoft.MvvmLight.Command;
 using System.Collections.ObjectModel;
 using ToDoList.Services;
 using ToDoList.Model;
+using System.Windows;
 
 namespace ToDoList.ViewModel
 {
@@ -11,6 +12,8 @@ namespace ToDoList.ViewModel
     {
         IDataAccessSupplier _ServiceProxy;
         private ObservableCollection<Suppliier> _Suppliers;
+        private Suppliier _Supplier;
+        public RelayCommand AddSupplierCommand { get; set; }
 
         /// <summary>
         /// Initializes a new instance of the MainViewModel class.
@@ -19,7 +22,9 @@ namespace ToDoList.ViewModel
         {
             _ServiceProxy = servPxy;
             Suppliers = new ObservableCollection<Suppliier>();
+            Supp = new Suppliier();
             GetSuppliers();
+            AddSupplierCommand = new RelayCommand(AddSupplier);
           
         }
 
@@ -37,6 +42,20 @@ namespace ToDoList.ViewModel
             }
         }
 
+        public Suppliier Supp
+        {
+            get
+            {
+                return _Supplier;
+            }
+
+            set
+            {
+                _Supplier = value;
+                RaisePropertyChanged("Supplier");
+            }
+        }
+
         void GetSuppliers()
         {
             Suppliers.Clear();
@@ -44,6 +63,14 @@ namespace ToDoList.ViewModel
             {
                 Suppliers.Add(item);
             }
+        }
+
+        void AddSupplier()
+        {
+            Suppliers.Add(Supp);
+            _ServiceProxy.CreateSupplier(Supp);
+            RaisePropertyChanged("Supp");
+            MessageBox.Show(Supp.Name + " has been Saved");
         }
     }
 }

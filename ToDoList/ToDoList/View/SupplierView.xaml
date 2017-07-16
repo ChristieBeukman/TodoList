@@ -11,6 +11,7 @@
             <ComboBox SelectedIndex="0"
                       DisplayMemberPath="Name"
                       ItemsSource="{Binding Main.Suppliers, Source={StaticResource Locator}}"/>
+            <TextBox/>
         </StackPanel>
     </Grid>
 </UserControl>

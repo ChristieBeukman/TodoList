@@ -17,9 +17,11 @@ namespace ToDoList.Services
             ctx = new ToDoDbEntities();
         }
 
-        public void CreateSupplier()
+
+        public void CreateSupplier(Suppliier Sup)
         {
-            throw new NotImplementedException();
+            ctx.Suppliiers.Add(Sup);
+            ctx.SaveChanges();
         }
 
         public ObservableCollection<Suppliier> GetSupplierDataAccess()
