@@ -1,34 +1,49 @@
 using GalaSoft.MvvmLight;
+using GalaSoft.MvvmLight.Command;
+using System.Collections.ObjectModel;
+using ToDoList.Services;
+using ToDoList.Model;
 
 namespace ToDoList.ViewModel
 {
-    /// <summary>
-    /// This class contains properties that the main View can data bind to.
-    /// <para>
-    /// Use the <strong>mvvminpc</strong> snippet to add bindable properties to this ViewModel.
-    /// </para>
-    /// <para>
-    /// You can also use Blend to data bind with the tool's support.
-    /// </para>
-    /// <para>
-    /// See http://www.galasoft.ch/mvvm
-    /// </para>
-    /// </summary>
+   
     public class MainViewModel : ViewModelBase
     {
+        IDataAccessSupplier _ServiceProxy;
+        private ObservableCollection<Suppliier> _Suppliers;
+
         /// <summary>
         /// Initializes a new instance of the MainViewModel class.
         /// </summary>
-        public MainViewModel()
+        public MainViewModel(IDataAccessSupplier servPxy)
         {
-            ////if (IsInDesignMode)
-            ////{
-            ////    // Code runs in Blend --> create design time data.
-            ////}
-            ////else
-            ////{
-            ////    // Code runs "for real"
-            ////}
+            _ServiceProxy = servPxy;
+            Suppliers = new ObservableCollection<Suppliier>();
+            GetSuppliers();
+          
+        }
+
+        public ObservableCollection<Suppliier> Suppliers
+        {
+            get
+            {
+                return _Suppliers;
+            }
+
+            set
+            {
+                _Suppliers = value;
+                RaisePropertyChanged("Suppliers");
+            }
+        }
+
+        void GetSuppliers()
+        {
+            Suppliers.Clear();
+            foreach (var item in _ServiceProxy.GetSupplierDataAccess())
+            {
+                Suppliers.Add(item);
+            }
         }
     }
 }

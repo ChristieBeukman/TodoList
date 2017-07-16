@@ -18,7 +18,6 @@ D:\Documents\Personal Projects\TodoList\ToDoList\ToDoList\bin\Debug\GalaSoft.Mvv
 D:\Documents\Personal Projects\TodoList\ToDoList\ToDoList\bin\Debug\GalaSoft.MvvmLight.Platform.xml
 D:\Documents\Personal Projects\TodoList\ToDoList\ToDoList\bin\Debug\Microsoft.Practices.ServiceLocation.pdb
 D:\Documents\Personal Projects\TodoList\ToDoList\ToDoList\bin\Debug\Microsoft.Practices.ServiceLocation.xml
-D:\Documents\Personal Projects\TodoList\ToDoList\ToDoList\obj\Debug\ToDoList.csprojResolveAssemblyReference.cache
 D:\Documents\Personal Projects\TodoList\ToDoList\ToDoList\obj\Debug\App.g.cs
 D:\Documents\Personal Projects\TodoList\ToDoList\ToDoList\obj\Debug\GeneratedInternalTypeHelper.g.cs
 D:\Documents\Personal Projects\TodoList\ToDoList\ToDoList\obj\Debug\ToDoList_MarkupCompile.cache
@@ -31,3 +30,6 @@ D:\Documents\Personal Projects\TodoList\ToDoList\ToDoList\obj\Debug\ToDoList.exe
 D:\Documents\Personal Projects\TodoList\ToDoList\ToDoList\obj\Debug\ToDoList.pdb
 D:\Documents\Personal Projects\TodoList\ToDoList\ToDoList\obj\Debug\View\MainWindow.g.cs
 D:\Documents\Personal Projects\TodoList\ToDoList\ToDoList\obj\Debug\View\MainWindow.baml
+D:\Documents\Personal Projects\TodoList\ToDoList\ToDoList\obj\Debug\View\SupplierView.g.cs
+D:\Documents\Personal Projects\TodoList\ToDoList\ToDoList\obj\Debug\View\SupplierView.baml
+D:\Documents\Personal Projects\TodoList\ToDoList\ToDoList\obj\Debug\ToDoList_Content.g.cs
